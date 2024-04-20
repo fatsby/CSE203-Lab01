@@ -23,12 +23,13 @@ public class StringRequests {
         System.out.println(str.length());
     }
     public void wordsCounter(){
-        int wordsCounter = 0;
+        int spaceCounter = 0;
         for (char c : str.toCharArray()) {
-            if (c != ' '){
-                wordsCounter++;
+            if (c == ' '){
+                spaceCounter++;
             }
         }
+        int wordsCounter = spaceCounter+1;
         System.out.println(wordsCounter);
 
     }
