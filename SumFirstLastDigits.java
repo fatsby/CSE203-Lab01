@@ -1,21 +1,23 @@
-import java.util.ArrayList;
-import java.util.Scanner;
 
 public class SumFirstLastDigits {
-    public static Scanner sc = new Scanner(System.in);
-    public static void main(String[] args) {
-        String input = sc.nextLine();
-        ArrayList<Character> digits = new ArrayList<Character>();
 
-        for (int i = 0; i < input.length(); i++) {
-            digits.add(input.charAt(i));
-        }
 
-        ArrayList<Integer> intDigits = new ArrayList<>();
-        for (Character digit : digits) {
-            intDigits.add(Character.getNumericValue(digit));
-        }
-        int sum = intDigits.getFirst() + intDigits.getLast();
-        System.out.println(sum);
+    private long number;
+
+    public SumFirstLastDigits() {
+
     }
+
+    public SumFirstLastDigits(long number) {
+        this.number = number;
+    }
+
+    public int sumFirstLastDigits() {
+        int first = (int) number;
+            while (first>10) first/=10;
+        int last = (int) (number % 10);
+        return first + last;
+    }
+
+
 }
