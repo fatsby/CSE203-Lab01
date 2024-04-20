@@ -10,7 +10,7 @@ public class HailstoneSequence {
        this.input = input;
    }
 
-   public void HailstoneSequence() {
+   public void executeHailstone() {
        while (input != 1) {
            if (input % 2 == 0) {
                System.out.print(input + " is even, so we take " + input + "/2 = ");
