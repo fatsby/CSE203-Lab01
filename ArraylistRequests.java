@@ -37,7 +37,7 @@ public class ArraylistRequests {
     }
 
     public void replaceElement(int pos, int num){
-        list.removeLast();
+        list.remove(list.size()-1);
         list.add(pos, num);
     }
 
